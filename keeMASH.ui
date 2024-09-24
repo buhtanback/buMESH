@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>848</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>95</width>
+      <height>137</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="openB">
+       <property name="text">
+        <string>open</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="closeB">
+       <property name="text">
+        <string>close</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="sendL">
+       <property name="text">
+        <string>send2MASH</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="upB">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>10</y>
+      <width>81</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>update</string>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="splitter_2">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>10</y>
+      <width>91</width>
+      <height>52</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QPushButton" name="pushB">
+     <property name="text">
+      <string>garland</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bedLB">
+     <property name="text">
+      <string>bedsideL</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>478</y>
+      <width>251</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QPushButton" name="tempB">
+               <property name="text">
+                <string>temp</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLCDNumber" name="lcdTemp"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QPushButton" name="humiB">
+             <property name="text">
+              <string>humidity</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdHumi"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>10</y>
+      <width>138</width>
+      <height>222</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="redB">
+       <property name="maximumSize">
+        <size>
+         <width>169</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>red led</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="briBoxR">
+       <property name="maximumSize">
+        <size>
+         <width>169</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string>0%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>10%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>20%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>30%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>40%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>50%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>60%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>70%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>80%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>90%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>100%</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="modBoxR">
+       <property name="maximumSize">
+        <size>
+         <width>169</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string>rainbow</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>rainbowG</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>bpm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>red</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>juggle</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>sinelon</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>confetti</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>green</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>rasta</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>white</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="maximumSize">
+        <size>
+         <width>169</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="maximumSize">
+        <size>
+         <width>169</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>speed</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLCDNumber" name="lcdSp">
+         <property name="maximumSize">
+          <size>
+           <width>169</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="spedE">
+         <property name="maximumSize">
+          <size>
+           <width>98</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QPushButton" name="speedBU">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="speedBD">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>10</y>
+      <width>97</width>
+      <height>247</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_12">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <widget class="QPushButton" name="huB">
+         <property name="text">
+          <string>humidifier</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="turboBox">
+         <item>
+          <property name="text">
+           <string>OFF</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>L</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>M</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>H</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pumpB">
+         <property name="text">
+          <string>pump</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="flowB">
+         <property name="text">
+          <string>flow</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ionB">
+         <property name="text">
+          <string>ionic</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QComboBox" name="watLBox">
+       <item>
+        <property name="text">
+         <string>0%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>10%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>20%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>30%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>40%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>50%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>60%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>70%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>80%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>90%</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>100%</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="colorBox">
+       <item>
+        <property name="text">
+         <string>Black</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Red</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Green</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>White</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="jajoB">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>10</y>
+      <width>83</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>jajo</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>227</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_13">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QCheckBox" name="checkEvent_1">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="timeEvent_1">
+         <property name="dateTime">
+          <datetime>
+           <hour>23</hour>
+           <minute>0</minute>
+           <second>0</second>
+           <year>2023</year>
+           <month>12</month>
+           <day>31</day>
+          </datetime>
+         </property>
+         <property name="calendarPopup">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEvent_1"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QCheckBox" name="checkEvent_2">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="timeEvent_2">
+         <property name="dateTime">
+          <datetime>
+           <hour>23</hour>
+           <minute>0</minute>
+           <second>0</second>
+           <year>2023</year>
+           <month>12</month>
+           <day>31</day>
+          </datetime>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEvent_2"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_10">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_14">
+       <item>
+        <widget class="QPushButton" name="CO2">
+         <property name="text">
+          <string>CO2</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="lcdCO2"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>221</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_11">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_17">
+       <item>
+        <widget class="QPushButton" name="pressure">
+         <property name="text">
+          <string>pressure</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="lcdpressure"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_15">
+       <item>
+        <widget class="QPushButton" name="soil">
+         <property name="text">
+          <string>soil</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="lcdSoil"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>upB</zorder>
+   <zorder>splitter_2</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>jajoB</zorder>
+   <zorder>horizontalLayoutWidget</zorder>
+   <zorder>horizontalLayoutWidget_2</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>848</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
