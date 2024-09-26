@@ -8,8 +8,8 @@ import datetime
 #choBD = sqlite3.connect('choinka_data.db')
 
 app = QtWidgets.QApplication([])
-ui = uic.loadUi("keeMASH.ui")
-ui.setWindowTitle("keeMASH")
+ui = uic.loadUi("buMASH.ui")
+ui.setWindowTitle("buMASH")
 
 serial = QSerialPort()
 serial.setBaudRate(115200)
@@ -233,7 +233,11 @@ def onRead():
     mod_change_fid(data[0])
     bri_change_fid(data[0])
 
-
+def dbgBox_change(s):
+    if s == QtCore.Qt.Checked:
+        sendi("dbg1")
+    else:
+        sendi("dbg0")
 
 #///////////////////////////////////////////////
 def checkEvent_1():
@@ -345,6 +349,9 @@ ui.pumpB.clicked.connect(lambda: sendi("pomp"))
 ui.flowB.clicked.connect(lambda: sendi("flow"))
 ui.ionB.clicked.connect(lambda: sendi("ion"))
 ui.huB.clicked.connect(lambda: sendi("huOn"))
+
+ui.dbgBox.stateChanged.connect(dbgBox_change)
+
 
 ui.jajoB.clicked.connect(lambda: sendi("jajo"))
 
