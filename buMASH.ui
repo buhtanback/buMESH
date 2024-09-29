@@ -85,14 +85,14 @@
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_3">
              <item>
-              <widget class="QPushButton" name="co2">
+              <widget class="QPushButton" name="pressure">
                <property name="text">
-                <string>ppm</string>
+                <string>press</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLCDNumber" name="lcdCO2"/>
+              <widget class="QLCDNumber" name="lcdpressure"/>
              </item>
             </layout>
            </item>
@@ -384,14 +384,14 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_8">
        <item>
-        <widget class="QPushButton" name="pm1B">
+        <widget class="QPushButton" name="co2">
          <property name="text">
-          <string>PM1 ug/m3</string>
+          <string>co2</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLCDNumber" name="lcdpm1"/>
+        <widget class="QLCDNumber" name="lcdCO2"/>
        </item>
       </layout>
      </item>
@@ -400,7 +400,7 @@
        <item>
         <widget class="QPushButton" name="pm2B">
          <property name="text">
-          <string>PM2.5 ug/m3</string>
+          <string>soil</string>
          </property>
         </widget>
        </item>
