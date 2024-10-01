@@ -147,16 +147,51 @@ def send2mash():                                # тут можуть бути �
     sendi(ui.sendL.text())
     ui.sendL.clear()
 
+
 def onRead():
     try:
         rx = serial.readLine()  # Зчитування лінії даних з сенсора
         rxs = str(rx, "utf-8").strip()  # Перетворення на рядок
         data = rxs.split(",")  # Розділення рядка на частини
+
         if len(data) == 0:
             print("Отримано порожні дані")
             return
 
         print(data)
+
+        if "Humidity" in data[0]:
+            try:
+                humi_str = data[0].split(":")[1].strip().replace(" %", "")
+                humi = float(humi_str)
+                if 0 <= humi <= 100:  # Перевіряємо, щоб вологість була в межах від 0 до 100%
+                    QTimer.singleShot(0, lambda: ui.lcdHumi.display(humi))  # Асинхронне оновлення інтерфейсу
+                    ui.humiB.setStyleSheet("background-color: green; color: white;")
+                else:
+                    print(f"Неправильне значення вологості: {humi}")
+            except ValueError:
+                print("Неправильний формат значення вологості")
+
+        if "Temp" in data[0]:
+            try:
+                temp_str = data[0].split(":")[1].strip().replace(" C", "")
+                temp = float(temp_str)
+                QTimer.singleShot(0, lambda: ui.lcdTemp.display(temp))  # Асинхронне оновлення інтерфейсу
+                ui.tempB.setStyleSheet("background-color: green; color: white;")
+            except ValueError:
+                print("Неправильний формат значення температури")
+
+            # Інші можливі дані, наприклад 'Pressure', 'CO2', тощо:
+        if "Pressure" in data[0]:
+            try:
+                pressure_str = data[0].split(":")[1].strip().replace(" hPa", "")
+                pressure = float(pressure_str)
+                QTimer.singleShot(0, lambda: ui.lcdpressure.display(pressure))
+                ui.pressure.setStyleSheet("background-color: green; color: white;")
+            except ValueError:
+                print("Неправильний формат значення тиску")
+
+
 
         watLBox_change_fid(data[0])
         mod_colorBox_fid(data[0])
