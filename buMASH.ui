@@ -70,9 +70,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>480</y>
-      <width>511</width>
-      <height>69</height>
+      <y>488</y>
+      <width>311</width>
+      <height>61</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -378,7 +378,7 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_8">
        <item>
-        <widget class="QPushButton" name="co2">
+        <widget class="QPushButton" name="CO2">
          <property name="text">
           <string>co2</string>
          </property>
